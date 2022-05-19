@@ -1,6 +1,6 @@
 classdef RBDyn3 < handle
     %RBDyn Generates the rigid body dynamics from a urdf file
-    
+    % ============================================== %
     properties
         robotStruc
         RbmFixed
