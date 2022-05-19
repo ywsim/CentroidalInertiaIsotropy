@@ -22,9 +22,13 @@ CII can compare a design scenario accorss different robots such as biped, quadru
 3. Calculate centroidal inertia matrix
 4. Calculate centroidal inertia isotropy
 5. Compare the proximodistal mass distribution of various robots
+![tutorial_example](https://user-images.githubusercontent.com/25633568/169211860-7c26c113-9f7b-4cf6-8f24-d1f8f3a48fcc.jpg)
 
 `RAL2022_paper_figures.m`
 1. Generate original figures on the RAL2022 paper (Link: TBU)
+![Fig3](https://user-images.githubusercontent.com/25633568/169211854-92877a2f-0279-4ae9-8211-c4da2ffde718.png)
+![Fig4](https://user-images.githubusercontent.com/25633568/169211859-672b5208-056b-42fa-aadf-d57a4a40314d.png)
+
 
 ### Code overview
 - `RBDyn3 (class)`
