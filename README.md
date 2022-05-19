@@ -13,7 +13,8 @@ We introduce a design metric called Centroidal Inertia Isotropy (CII), to quanti
 CII can compare a design scenario accorss different robots such as biped, quadruped or animaloid. This is because CII can be calculated for any robot represented as  a rigid body structure. 
 
 ### What you can do with this repo
-1. create rigid body struture of 3 different tpyes of robots using URDF files 
+`tutorial.m`
+1. Create rigid body struture of 3 different tpyes of robots using URDF files 
     - Quadruped (Mini Cheetah)
     - Biped, Proximal Actuation (Tello, Cassie, Atlas (DRC))
     - Biped, Collocated Actuation (Tello, HuboPlus)
@@ -22,15 +23,18 @@ CII can compare a design scenario accorss different robots such as biped, quadru
 4. Calculate centroidal inertia isotropy
 5. Compare the proximodistal mass distribution of various robots
 
+`RAL2022_paper_figures.m`
+1. Generate original figures on the RAL2022 paper (Link: TBU)
+
 ### Code overview
-- **RBDyn3 (class)**
+- `RBDyn3 (class)`
     - RBDyn3 creates robot object by 1. importing URDF and 2. associating 1. with Featherstone's rigid body dynamics algorithm
-- **obj.getFullConfig([q2, q3, q4])**
+- `obj.getFullConfig([q2, q3, q4])`
     - It is assumed that users can play with three joint angles; Hip Ab/Adduction (q2), Hip Flex/Extension (q3), and Knee Flex/Extension (q4). 
     - However, actual robot models have more joints. So, to conform to inidividual robot's configuration, the above three joint angles need to be expanded to full configuration vector using 'getFullConfig'. 
-- **calcCII(q0, q)**
+- `obj.calcCII(q0, q)`
     - CII is calculated per configuration, q. Plus, CII is calculated with respect to a nominal configuation q0. 
-    - For instance, 0 = calcCII(q0, q0)
+    - For instance, calcCII(q0, q0) is always zero
     - CII can be evaluated for all joint configurations within joint limits. (There is no self collision detection)
     - Among those CII values, there are max and min values. We are particularly interested in rCII:=maxCII - minCII.
 
