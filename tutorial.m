@@ -44,7 +44,6 @@ robot = cell(1,nRobot);
 % Instantiate robot objects
 for ii = 1:nRobot  % for all robots
     robot{ii} = RBDyn3(fileNames{ii}, robotNames{ii});  
-    disp(['Rigid body structure of ',sprintf(robotNames{ii}), ' is created. (', num2str(ii), '/', num2str(nRobot), ')'])
 end
 
 

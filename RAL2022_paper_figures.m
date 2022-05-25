@@ -199,7 +199,7 @@ view([    38.0101   18.2359])
 
 % export
 set(gcf, 'Position', [100, 100, 700, 300])
-exportgraphics(gcf, 'RAL2022_CII_Dist_revised.emf','ContentType', 'vector')
+% exportgraphics(gcf, 'RAL2022_CII_Dist_revised.emf','ContentType', 'vector')
 % exportgraphics(gcf, 'RAL2022_CII_Dist_revised_1.pdf','ContentType', 'vector')
 
 
@@ -327,7 +327,7 @@ xlim([.5, 6.5])
 ylim([-3.3, .5])
 
 % Label
-set(gca, 'XTickLabel', robotNameArray2)
+% set(gca, 'XTickLabel', robotNameArray2)
 ax = gca;
 ax.XAxis.FontSize = textSize.axis;
 ax.YAxis.FontSize = textSize.axis;
